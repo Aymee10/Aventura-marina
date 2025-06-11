@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rescate en la Playa</title>
+    <link rel="stylesheet" href="style.css"/>
+    </head>
+<body>
+    
+
+   <h1>Rescate en la Playa</h1>
+   <div id="puntos">Puntos: 0</div>
+   <button id="toggle-music" class="musica-btn">🔊 Música</button>
+
+  
+  <div id="tiempo"> Tiempo: 01:00</div>
+   <div id="game-container"></div>
+
+   <div id="modalP" class="modalP">
+    <div class="modalP-content">
+      <p id="modal-message">
+        
+  Lina es una niña curiosa que está de vacaciones en una isla tropical. Un día, mientras nadaba cerca de la playa, encontró la entrada a una cueva submarina oculta. <br>
+  La leyenda local dice que dentro se encuentra la Perla de Luz, un artefacto mágico que protege el equilibrio del océano.
+  <br>
+  🧭 Explora la cueva y recoge todas los perlas hasta formar la Perla de Luz. <br>Solo tienes 1 minuto para completar la tarea.
+  <br><br>
+  ⚠️ Cuidado con las medusas que intentarán detenerte; si las tocas perderás ⏱️20s de tu tiempo.
+  <br>
+  🔴Usa las teclas ← y → para moverte y ↑ para saltar.
+  <br>
+</p>
+
+      <button id="start-btn">Empezar</button>
+    </div>
+  </div>
+
+  <div id="modalTiempo" class="modalP" style="display: none;">
+  <div class="modalP-content">
+    <p>⏰ ¡Tiempo agotado!</p>
+    <button id="reiniciar-btn">Reiniciar</button>
+  </div>
+</div>
+
+<div id="modalWin" class="modalP" style="display: none;">
+  <div class="modalP-content">
+    <img src="./img/lenaGanadora.png" alt="Ganador" style="max-width: 100%; margin-bottom: 15px;" />
+    <p style="font-size: 20px; font-weight: bold;"> ¡Felicidades, lograste recoger todas las perlas y el mar vuelve a estar a salvo!</p>
+    <button id="win-restart-btn">Volver a jugar</button>
+  </div>
+</div>
+
+
+<audio id="musica-fondo" src="./sound/olas.mp3" loop autoplay></audio>
+<audio id="sonido-moneda" src="./sound/atrapaPerla.mp3"></audio>
+<audio id="sonido-medusa" src="./sound/negativo.mp3"></audio>
+<audio id="sonido-perder" src="./sound/gameOver.mp3"></audio>
+<audio id="sonido-ganar" src="./sound/winning.mp3"></audio>
+
+
+
+   <script type="module" src="main.js"></script> 
+</body>
+</html>
