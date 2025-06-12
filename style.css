@@ -142,9 +142,26 @@ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-position: center;
 }
 
+.personaje-bueno {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-image: url(./img/bubble.svg);
+  background-size: cover;
+  background-position: center;
+}
+
 .texto-colision {
   position: absolute;
-  color: red;
+  color: rgb(253, 4, 4);
+  font-size: 24px;
+  font-weight: bold;
+  animation: desaparecer 1s forwards;
+}
+
+.texto-colisionB {
+  position: absolute;
+  color: rgb(5, 231, 24);
   font-size: 24px;
   font-weight: bold;
   animation: desaparecer 1s forwards;

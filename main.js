@@ -12,19 +12,17 @@ class Game {
         this.temporizador = null;
         this.iniciarTemporizador();
         this.malos = [];
+        this.buenos = [];
         this.crearMalos();
         this.fin = false;
-
-
+        this.crearBuenos();
     }
     iniciarTemporizador() {
         this.temporizador = setInterval(() => {
             this.tiempoRestante--;
-
             const minutos = Math.floor(this.tiempoRestante / 60);
             const segundos = this.tiempoRestante % 60;
             this.tiempoElement.textContent = `Tiempo ${minutos.toString().padStart(2, '0')}:${segundos.toString().padStart(2, '0')}`;
-
             if (this.tiempoRestante <= 0) {
                 clearInterval(this.temporizador);
                 this.finDelJuego();
@@ -35,7 +33,7 @@ class Game {
     crearEscenario() {
         this.personaje = new Personaje();
         this.container.appendChild(this.personaje.element);
-        for (let i = 0; i < 5; i++) {
+        for (let i = 0; i < 8; i++) {
             const moneda = new Moneda();
             this.monedas.push(moneda);
             this.container.appendChild(moneda.element);
@@ -49,6 +47,8 @@ class Game {
     }
 
     checkColisiones() {
+        const textM = "texto-colision";
+        const textB = "texto-colisionB";
         setInterval(() => {
             this.monedas.forEach((moneda, index) => {
                 if (this.personaje.colisionaCon(moneda)) {
@@ -65,18 +65,31 @@ class Game {
             this.malos.forEach((malo) => {
                 if (this.personaje.colisionaCon(malo) && !malo.colisionado) {
                     malo.colisionado = true;
-                    this.mostrarTexto("-20", this.personaje.x, this.personaje.y);
-                    this.restarTiempo(20);
+                    this.mostrarTexto("-20", this.personaje.x, this.personaje.y, textM);
+                    this.restarTiempo(-20);
                     setTimeout(() => {
                         malo.eliminar();
                     }, 200);
                     const sonidoMal = document.getElementById('sonido-medusa');
                     sonidoMal.currentTime = 0;
                     sonidoMal.play();
-
-
                 }
             });
+
+            this.buenos.forEach((bueno) => {
+                if (this.personaje.colisionaCon(bueno) && !bueno.colisionado) {
+                    bueno.colisionado = true;
+                    this.mostrarTexto("+10s", this.personaje.x, this.personaje.y, textB);
+                    this.restarTiempo(10);
+                    setTimeout(() => {
+                        bueno.eliminar();
+                    }, 200);
+                    const sonidoAir = document.getElementById('sonido-air');
+                    sonidoAir.currentTime = 0;
+                    sonidoAir.play();
+                }
+            });
+
 
         }, 50)
     }
@@ -85,15 +98,13 @@ class Game {
         this.puntosElement.textContent = `Puntos: ${this.puntuacion}`;
 
     }
-    mostrarTexto(texto, x, y) {
+    mostrarTexto(texto, x, y, t) {
         const textoDiv = document.createElement("div");
-        textoDiv.className = "texto-colision";
+        textoDiv.className = t;
         textoDiv.style.left = `${x}px`;
         textoDiv.style.top = `${y}px`;
         textoDiv.textContent = texto;
-
         this.container.appendChild(textoDiv);
-
         setTimeout(() => {
             if (textoDiv.parentNode) {
                 textoDiv.parentNode.removeChild(textoDiv);
@@ -108,54 +119,64 @@ class Game {
                 this.malos.push(malo);
                 this.container.appendChild(malo.element);
             }
-        }, 4000); // cada 4 segundos intenta agregar uno
+        }, 4000);
     }
-    restarTiempo(segundos) {
-        this.tiempoRestante -= segundos;
-        if (this.tiempoRestante < 0) this.tiempoRestante = 0;
 
+    crearBuenos() {
+        setInterval(() => {
+            if (this.buenos.length < 2 && this.fin === false) {
+                const bueno = new PersonajeBueno();
+                this.buenos.push(bueno);
+                this.container.appendChild(bueno.element);
+            }
+        }, 7000);
+    }
+
+
+    restarTiempo(segundos) {
+        this.tiempoRestante += segundos;
+        if (this.tiempoRestante < 0) this.tiempoRestante = 0;
         const minutos = Math.floor(this.tiempoRestante / 60);
         const segundosRest = this.tiempoRestante % 60;
         this.tiempoElement.textContent = `Tiempo: ${minutos.toString().padStart(2, '0')}:${segundosRest.toString().padStart(2, '0')}`;
     }
 
+    limpiarPantalla() {
+        clearInterval(this.temporizador); // para el tiempo
+        this.fin = true;
+        this.monedas.forEach(moneda => {
+            if (moneda.element.parentNode) {
+                moneda.element.parentNode.removeChild(moneda.element);
+            }
+        });
+        this.monedas = [];
+        if (this.personaje && this.personaje.element.parentNode) {
+            this.personaje.element.parentNode.removeChild(this.personaje.element);
+        }
+        this.malos.forEach(malo => {
+            clearInterval(malo.intervaloMovimiento);
+            if (malo.element.parentNode) {
+                malo.element.parentNode.removeChild(malo.element);
+            }
+        });
+        this.malos = [];
+        this.buenos.forEach(bueno => {
+            clearInterval(bueno.intervaloMovimiento);
+            if (bueno.element.parentNode) {
+                bueno.element.parentNode.removeChild(bueno.element);
+            }
+        });
+        this.buenos = [];
+
+
+    }
     verificarVictoria() {
         setTimeout(() => {
             if (this.monedas.length === 0) {
-                clearInterval(this.temporizador); // para el tiempo
-                this.fin = true;
-                // Eliminar todas las monedas del DOM
-                this.monedas.forEach(moneda => {
-                    if (moneda.element.parentNode) {
-                        moneda.element.parentNode.removeChild(moneda.element);
-                    }
-                });
-                this.monedas = [];
-
-                // Eliminar el personaje
-                if (this.personaje && this.personaje.element.parentNode) {
-                    this.personaje.element.parentNode.removeChild(this.personaje.element);
-                }
-
-                // Eliminar todos los malos (medusas)
-                this.malos.forEach(malo => {
-                    clearInterval(malo.intervaloMovimiento);
-                    if (malo.element.parentNode) {
-                        malo.element.parentNode.removeChild(malo.element);
-                    }
-
-                });
-                this.malos = [];
-
-                // Mostrar modal ganador
-
+                this.limpiarPantalla();
                 document.getElementById('modalWin').style.display = 'flex';
-
-
-                // Música de victoria
                 const musicaFondo = document.getElementById('musica-fondo');
                 const musicaWin = document.getElementById('sonido-ganar');
-
                 musicaFondo.pause();
                 musicaFondo.currentTime = 0;
                 musicaWin.play();
@@ -166,49 +187,12 @@ class Game {
 
     finDelJuego() {
         setTimeout(() => {
-            this.fin = true;
-            // Eliminar todas las monedas
-            this.monedas.forEach(moneda => {
-                if (moneda.element.parentNode) {
-                    moneda.element.parentNode.removeChild(moneda.element);
-                }
-            });
-            this.monedas = [];
-
-            // Eliminar personaje
-            if (this.personaje && this.personaje.element.parentNode) {
-                this.personaje.element.parentNode.removeChild(this.personaje.element);
-            }
-
-            // Eliminar todos los malos (medusas)
-            this.malos.forEach(malo => {
-                clearInterval(malo.intervaloMovimiento);
-                if (malo.element.parentNode) {
-                    malo.element.parentNode.removeChild(malo.element);
-                }
-
-            });
-            this.malos = [];
-
-            // Mostrar modal tiempo agotado
-
+            this.limpiarPantalla();
             document.getElementById('modalTiempo').style.display = 'flex';
         }, 500);
 
-
-        /*
-        setTimeout(() => {
-                    document.getElementById('modalWin').classList.add('show');
-                }, 1000);
-        */
-
-
-
-        // Música perder
         const perder = document.getElementById('sonido-perder');
         perder.play();
-
-        // Pausar música de fondo
         const musica = document.getElementById('musica-fondo');
         musica.pause();
         musica.currentTime = 0;
@@ -321,7 +305,6 @@ class PersonajeMalo extends Personaje {
         this.x = -80; // comienza fuera de la pantalla izquierda
         this.y = Math.random() * 350;
         this.colisionado = false;
-
         this.element.classList.remove("personaje");
         this.element.classList.add("personaje-malo");
         this.actualizarPosicion();
@@ -351,8 +334,23 @@ class PersonajeMalo extends Personaje {
     }
 }
 
-
-
+class PersonajeBueno extends PersonajeMalo {
+    constructor() {
+        super();
+        this.element.classList.remove("personaje-malo");
+        this.element.classList.add("personaje-bueno");
+    }
+    eliminar() {
+        clearInterval(this.intervaloMovimiento);
+        if (this.element.parentNode) {
+            this.element.parentNode.removeChild(this.element);
+        }
+        if (window.juego && window.juego.buenos) {
+            const idx = window.juego.buenos.indexOf(this);
+            if (idx !== -1) window.juego.buenos.splice(idx, 1);
+        }
+    }
+}
 
 // Mostrar el modal nada más cargar la página
 window.onload = function () {
