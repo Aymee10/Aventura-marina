@@ -1,4 +1,3 @@
-
 class Game {
     constructor() {
         this.container = document.getElementById("game-container");
@@ -63,7 +62,7 @@ class Game {
 
                 }
             });
-            this.malos.forEach((malo, index) => {
+            this.malos.forEach((malo) => {
                 if (this.personaje.colisionaCon(malo) && !malo.colisionado) {
                     malo.colisionado = true;
                     this.mostrarTexto("-20", this.personaje.x, this.personaje.y);
@@ -121,10 +120,54 @@ class Game {
     }
 
     verificarVictoria() {
-        if (this.monedas.length === 0) {
-            clearInterval(this.temporizador); // para el tiempo
+        setTimeout(() => {
+            if (this.monedas.length === 0) {
+                clearInterval(this.temporizador); // para el tiempo
+                this.fin = true;
+                // Eliminar todas las monedas del DOM
+                this.monedas.forEach(moneda => {
+                    if (moneda.element.parentNode) {
+                        moneda.element.parentNode.removeChild(moneda.element);
+                    }
+                });
+                this.monedas = [];
+
+                // Eliminar el personaje
+                if (this.personaje && this.personaje.element.parentNode) {
+                    this.personaje.element.parentNode.removeChild(this.personaje.element);
+                }
+
+                // Eliminar todos los malos (medusas)
+                this.malos.forEach(malo => {
+                    clearInterval(malo.intervaloMovimiento);
+                    if (malo.element.parentNode) {
+                        malo.element.parentNode.removeChild(malo.element);
+                    }
+
+                });
+                this.malos = [];
+
+                // Mostrar modal ganador
+
+                document.getElementById('modalWin').style.display = 'flex';
+
+
+                // Música de victoria
+                const musicaFondo = document.getElementById('musica-fondo');
+                const musicaWin = document.getElementById('sonido-ganar');
+
+                musicaFondo.pause();
+                musicaFondo.currentTime = 0;
+                musicaWin.play();
+            }
+        }, 500);
+    }
+
+
+    finDelJuego() {
+        setTimeout(() => {
             this.fin = true;
-            // Eliminar todas las monedas del DOM
+            // Eliminar todas las monedas
             this.monedas.forEach(moneda => {
                 if (moneda.element.parentNode) {
                     moneda.element.parentNode.removeChild(moneda.element);
@@ -132,7 +175,7 @@ class Game {
             });
             this.monedas = [];
 
-            // Eliminar el personaje
+            // Eliminar personaje
             if (this.personaje && this.personaje.element.parentNode) {
                 this.personaje.element.parentNode.removeChild(this.personaje.element);
             }
@@ -147,45 +190,19 @@ class Game {
             });
             this.malos = [];
 
-            // Mostrar modal ganador
-            document.getElementById('modalWin').style.display = 'flex';
+            // Mostrar modal tiempo agotado
 
-            // Música de victoria
-            const musicaFondo = document.getElementById('musica-fondo');
-            const musicaWin = document.getElementById('sonido-ganar');
+            document.getElementById('modalTiempo').style.display = 'flex';
+        }, 500);
 
-            musicaFondo.pause();
-            musicaFondo.currentTime = 0;
-            musicaWin.play();
-        }
-    }
-    finDelJuego() {
-        this.fin = true;
-        // Eliminar todas las monedas
-        this.monedas.forEach(moneda => {
-            if (moneda.element.parentNode) {
-                moneda.element.parentNode.removeChild(moneda.element);
-            }
-        });
-        this.monedas = [];
 
-        // Eliminar personaje
-        if (this.personaje && this.personaje.element.parentNode) {
-            this.personaje.element.parentNode.removeChild(this.personaje.element);
-        }
+        /*
+        setTimeout(() => {
+                    document.getElementById('modalWin').classList.add('show');
+                }, 1000);
+        */
 
-        // Eliminar todos los malos (medusas)
-        this.malos.forEach(malo => {
-            clearInterval(malo.intervaloMovimiento);
-            if (malo.element.parentNode) {
-                malo.element.parentNode.removeChild(malo.element);
-            }
 
-        });
-        this.malos = [];
-
-        // Mostrar modal tiempo agotado
-        document.getElementById('modalTiempo').style.display = 'flex';
 
         // Música perder
         const perder = document.getElementById('sonido-perder');
@@ -196,13 +213,13 @@ class Game {
         musica.pause();
         musica.currentTime = 0;
     }
-
 }
+
 
 class Personaje {
     constructor() {
-        this.x = 50;   // a la izquierda
-        this.y = 395;
+        this.x = 0;   // a la izquierda
+        this.y = 280;
         this.width = 50;
         this.height = 50;
         this.velocidad = 10;
@@ -213,9 +230,13 @@ class Personaje {
 
     }
     mover(evento) {
-        if (evento.key === "ArrowRight" && this.x + this.width + this.velocidad <= 950) {
+        if (evento.key === "ArrowRight" && this.x + this.width + this.velocidad <= 750) {
+            this.element.style.backgroundImage = 'url(./img/lina.png)';
+
             this.x += this.velocidad;
         } else if (evento.key === "ArrowLeft" && this.x - this.velocidad >= 0) {
+            this.element.style.backgroundImage = 'url(./img/lina_left.png)';
+
             this.x -= this.velocidad;
         } else if (evento.key === "ArrowUp" && !this.saltando) {
             this.saltar();
@@ -226,7 +247,7 @@ class Personaje {
     saltar() {
         this.saltando = true;
         this.element.style.backgroundImage = 'url(./img/lina_salta.png)';
-        let alturaMaxima = this.y - 350; //250
+        let alturaMaxima = Math.max(0, this.y - 300);
 
         const salto = setInterval(() => {
             if (this.y > alturaMaxima) {
@@ -242,7 +263,7 @@ class Personaje {
     caer() {
         const gravedad = setInterval(() => {
             //if (this.y + this.height + 10 <= 600) {
-            if (this.y < 400) {
+            if (this.y < 280) {
                 this.y += 10;
             } else {
                 // this.y = 600 - this.height;
@@ -274,8 +295,8 @@ class Moneda {
     constructor() {
         this.width = 30;
         this.height = 30;
-        this.x = Math.random() * 700 + 50;
-        this.y = Math.random() * 245 + 150; // entre 150px y 395px
+        this.x = Math.random() * 700;
+        this.y = Math.random() * 320;
 
 
 
@@ -298,7 +319,7 @@ class PersonajeMalo extends Personaje {
         super();
         this.velocidad = 2 + Math.random() * 2;
         this.x = -80; // comienza fuera de la pantalla izquierda
-        this.y = Math.random() * 400 + 100;
+        this.y = Math.random() * 350;
         this.colisionado = false;
 
         this.element.classList.remove("personaje");
@@ -339,7 +360,6 @@ window.onload = function () {
 
     document.getElementById('start-btn').addEventListener('click', function () {
         document.getElementById('modalP').style.display = 'none';
-        // Reproducir música
         const musica = document.getElementById('musica-fondo');
         musica.play();
         const btnMusica = document.getElementById('toggle-music');
@@ -359,11 +379,10 @@ window.onload = function () {
     });
 }
 document.getElementById('reiniciar-btn').addEventListener('click', function () {
-    location.reload(); // Recarga la página
+    location.reload();
 });
 
 document.getElementById('win-restart-btn').addEventListener('click', () => {
-    // Detener música de victoria si sigue sonando
     const musicaWin = document.getElementById('sonido-ganar');
     musicaWin.pause();
     musicaWin.currentTime = 0;
@@ -372,6 +391,9 @@ document.getElementById('win-restart-btn').addEventListener('click', () => {
 
 
 function empezarJuego() {
+
     const juego = new Game();
+
+
 }
 
