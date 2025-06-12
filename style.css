@@ -2,8 +2,11 @@ body {
   margin: 0;
   font-family: Arial, sans-serif;
   overflow: hidden;
-  background-image: url(./img/fondo.jpeg);
-  
+  background-image: url(./img/fondo1.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+ 
   display: flex;
   justify-content: center;
   align-items: center;
@@ -13,8 +16,8 @@ body {
 
 #game-container {
   position: relative;
-  width: 1000px;
-  height: 600px;
+  width: 750px;
+  height: 450px;
   margin: 20px auto;
   border: 10px solid #6d6d6d;
   background-clip: padding-box;
@@ -23,15 +26,15 @@ body {
   background-position: center;
    overflow: hidden;
   border-radius: 30px;
-  background-image: url(./img/cueva2.png);
+  background-image: url(./img/cueva1.png);
   box-sizing: border-box;
 
 
 }
 .personaje {
 position: absolute;
-  width: 90px;
-  height: 185px;
+  width: 65px;
+  height: 135px;
   background-image: url(./img/lina.png); /* tu personaje */
   background-size: cover;
   background-position: center;
@@ -39,15 +42,15 @@ position: absolute;
 
 .moneda {
   position: absolute;
-  width: 30px;
-  height: 30px;
+  width: 25px;
+  height: 25px;
   background-image: url(./img/pearl.svg);
   background-size: cover;
   background-position: center;
 }
 
 #puntos {
-  font-size: 20px;
+  font-size: 15px;
   text-align: center;
   margin: 10px 0;
 }
@@ -66,6 +69,7 @@ position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: 0.5s ease;
 }
 
 .modalP-content {
@@ -98,8 +102,8 @@ button:hover {
 
 .personaje-malo {
   position: absolute;
-  width: 70px;
-  height: 70px;
+  width: 50px;
+  height: 50px;
   background-image: url(./img/jellyfish.svg);
   background-size: cover;
   background-position: center;
