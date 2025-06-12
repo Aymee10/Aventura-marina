@@ -214,8 +214,12 @@ class Personaje {
     }
     mover(evento) {
         if (evento.key === "ArrowRight" && this.x + this.width + this.velocidad <= 950) {
+            this.element.style.backgroundImage = 'url(./img/lina.png)';
+
             this.x += this.velocidad;
         } else if (evento.key === "ArrowLeft" && this.x - this.velocidad >= 0) {
+            this.element.style.backgroundImage = 'url(./img/lina_left.png)';
+
             this.x -= this.velocidad;
         } else if (evento.key === "ArrowUp" && !this.saltando) {
             this.saltar();
