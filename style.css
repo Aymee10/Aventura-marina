@@ -1,13 +1,16 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  overflow: hidden;
+ 
   background-image: url(./img/fondo.jpeg);
-  
+  background-size: cover;
+  background-position: center;
+   min-height: 100vh;
+
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  
   flex-direction: column;
 }
 
@@ -15,6 +18,7 @@ body {
   position: relative;
   width: 1000px;
   height: 600px;
+  max-height: calc(100vh - 120px); 
   margin: 20px auto;
   border: 10px solid #6d6d6d;
   background-clip: padding-box;
