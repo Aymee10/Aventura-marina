@@ -1,3 +1,26 @@
+function escalarJuego() {
+    const contenedor = document.getElementById("game-container");
+    const escala = 0.75; // Ajusta este valor para hacerlo más pequeño o más grande (0.5 = 50%, 1 = 100%)
+
+    contenedor.style.transform = `scale(${escala})`;
+    contenedor.style.transformOrigin = 'top left';
+
+    // Centrar horizontalmente y verticalmente
+    const anchoOriginal = 1000; // Ancho de tu juego original
+    const altoOriginal = 600;   // Alto de tu juego original
+
+    // Calcula posición para centrarlo
+    const left = `calc(50% - ${(anchoOriginal * escala) / 2}px)`;
+    const top = `calc(50% - ${(altoOriginal * escala) / 2}px)`;
+
+    contenedor.style.position = 'absolute';
+    contenedor.style.left = left;
+    contenedor.style.top = top;
+}
+
+
+
+
 
 class Game {
     constructor() {
@@ -376,6 +399,16 @@ document.getElementById('win-restart-btn').addEventListener('click', () => {
 
 
 function empezarJuego() {
-    const juego = new Game();
+
+
+
+
+    // Ejecutar cuando cargue
+    window.addEventListener("load", () => {
+        escalarJuego();
+        const juego = new Game();
+    });
+
+
 }
 

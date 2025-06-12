@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>Rescate en la Playa</title>
+    <title>Rescate Marino</title>
     <link rel="stylesheet" href="style.css"/>
     </head>
 <body>
@@ -39,7 +39,10 @@
 
   <div id="modalTiempo" class="modalP" style="display: none;">
   <div class="modalP-content">
-    <p>⏰ ¡Tiempo agotado!</p>
+    <img src="./img/heart.svg" alt="Ganador" style="max-width: 100%; margin-bottom: 15px;" />
+    <p>⏰ ¡Tiempo agotado!<br>
+    No has completado el reto y ya no te queda tiempo. <br>
+  Intenta de nuevo y rescata la Perla</p>
     <button id="reiniciar-btn">Reiniciar</button>
   </div>
 </div>
@@ -47,6 +50,7 @@
 <div id="modalWin" class="modalP" style="display: none;">
   <div class="modalP-content">
     <img src="./img/lenaGanadora.png" alt="Ganador" style="max-width: 100%; margin-bottom: 15px;" />
+
     <p style="font-size: 20px; font-weight: bold;"> ¡Felicidades, lograste recoger todas las perlas y el mar vuelve a estar a salvo!</p>
     <button id="win-restart-btn">Volver a jugar</button>
   </div>
