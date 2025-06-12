@@ -50,29 +50,51 @@ position: absolute;
 }
 
 #puntos {
-  font-size: 15px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  font-size: 20px;
   text-align: center;
   margin: 10px 0;
+  text-decoration-color: #00445d;
 }
 
-
+#tiempo {
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  font-size: 20px;
+  text-align: center;
+  margin: 10px 0;
+  color:  rgb(189, 8, 8);
+    
+}
 /* Estilo para el modal */
 .modalP {
   display: none; /* oculto inicialmente */
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-
+  width: 70%;
+  height: 70%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 320px;
+  max-width: 90%;
+  padding: 25px 30px;
+  background:  #005f99;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 95, 153, 0.6);
+  color: #e0f7fa;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  z-index: 9999;
   display: flex;
   justify-content: center;
   align-items: center;
   transition: 0.5s ease;
 }
 
-.modalP-content {
+/*.modalP-content {
   background: white;
   padding: 20px 30px;
   border-radius: 8px;
@@ -94,6 +116,45 @@ button {
 
 button:hover {
   background-color: #0056b3;
+}
+*/
+
+.modalP-content h2 ,h1{
+  margin-bottom: 15px;
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-shadow: 0 2px 6px rgba(0, 0, 50, 0.7);
+}
+
+/* Párrafos dentro del modal */
+.modalP-content p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  text-shadow: 0 1px 3px rgba(0, 0, 50, 0.5);
+}
+
+/* Botones estilo marina */
+.modalP-content button {
+  background: linear-gradient(145deg, #008bbf, #00d6ff);
+  border: none;
+  padding: 10px 22px;
+  border-radius: 12px;
+  color: #00445d;
+  font-weight: 600;
+  font-size: 1.1rem;
+  cursor: pointer;
+  box-shadow: 0 6px 12px rgba(0, 214, 255, 0.5);
+  transition: all 0.3s ease;
+  user-select: none;
+  margin: 0 auto;
+  min-width: 130px;
+}
+
+.modalP-content button:hover {
+  background: linear-gradient(145deg, #00d6ff, #008bbf);
+  color: #002f44;
+  box-shadow: 0 8px 18px rgba(0, 214, 255, 0.8);
+  transform: translateY(-2px);
 }
 
 
