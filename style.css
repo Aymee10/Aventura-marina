@@ -1,7 +1,7 @@
 /*html {
   zoom: 0.75; 
 }*/
-/*body {
+body {
   margin: 0;
   font-family: Arial, sans-serif;
  
@@ -15,22 +15,8 @@
   align-items: center;
   
   flex-direction: column;
-}*/
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background-image: url(./img/fondo.jpeg);
-  background-size: cover;
-  background-position: center;
-  
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: start; /* evita centrado vertical completo */
-  overflow-y: auto; /* importante: permite scroll si se necesita */
 }
-/*
+
 #game-container {
   position: relative;
   width: 1000px;
@@ -46,23 +32,10 @@ body {
   border-radius: 30px;
   background-image: url(./img/cueva2.png);
   box-sizing: border-box;
+  transform: scale(0.8);
+  transform-origin: top center;
 
-
-}*/
-
-#game-container {
-  width: 100%;
-  max-width: 1000px;
-  height: auto;
-  aspect-ratio: 5 / 3; /* mantiene la proporción 1000x600 */
-  background-image: url(./img/cueva2.png);
-  background-size: cover;
-  background-position: center;
-  border: 10px solid #6205f7;
-  border-radius: 30px;
-  overflow: hidden;
 }
-
 
 
 .personaje {
