@@ -203,7 +203,7 @@ class Game {
 class Personaje {
     constructor() {
         this.x = 0;   // a la izquierda
-        this.y = 280;
+        this.y = 250;
         this.width = 50;
         this.height = 50;
         this.velocidad = 10;
@@ -247,7 +247,7 @@ class Personaje {
     caer() {
         const gravedad = setInterval(() => {
             //if (this.y + this.height + 10 <= 600) {
-            if (this.y < 280) {
+            if (this.y < 250) {
                 this.y += 10;
             } else {
                 // this.y = 600 - this.height;
@@ -281,7 +281,7 @@ class Moneda {
         this.height = 30;
         this.x = Math.random() * 700;
         // this.y = Math.random() * 320;
-        this.y = 50 + Math.random() * 200;
+        this.y = 20 + Math.random() * 200;
 
 
 
@@ -305,7 +305,7 @@ class PersonajeMalo extends Personaje {
         this.velocidad = 2 + Math.random() * 2;
         this.x = -80; // comienza fuera de la pantalla izquierda
         // this.y = Math.random() * 350;
-        this.y = 50 + Math.random() * 200;
+        this.y = 20 + Math.random() * 200;
         this.colisionado = false;
         this.element.classList.remove("personaje");
         this.element.classList.add("personaje-malo");
