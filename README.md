@@ -11,10 +11,10 @@
 <img src="img/bubble.svg" alt="Burbuja" width="40" height="40"/>   **Para ayudarte en tu misión las burbujas de aire te darán 10 segundos extra, atrápalas antes de que desaparezcan.**
 
 
-##  Usa las teclas
-## ⬅ Para moverte a la izquierda
-## ➡ Para moverte a la derecha
-##  ⬆ Para saltar.
+###  Usa las teclas
+### ⬅ Para moverte a la izquierda
+### ➡ Para moverte a la derecha
+###  ⬆ Para saltar.
 
 
   **Puedes ver en la parte superior tu puntuación y el tiempo restante actualizado cada segundo**
