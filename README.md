@@ -12,11 +12,12 @@
 
 <img src="img/bubble.svg" alt="Burbuja" width="40" height="40"/>   **Para ayudarte en tu misión las burbujas de aire te darán 10 segundos extra, atrápalas antes de que desaparezcan.**
 
+<p style="font-size:20px; color:#D7263D; font-weight:bold;">
+🔴 Usa las teclas ⬅ y ➡ para moverte y ⬆ para saltar.
+</p>
 
-### **🔴Usa las teclas ⬅ y ➡ para moverte y ⬆ para saltar.**
+<p style="font-size:20px; color:#F0A500; font-weight:bold;">
+⏳ Recuerda que solo tienes 1 minuto.
+</p>
 
-                            ## **⏳ Recuerda que solo tienes 1 minuto.**
-
-<a href="https://aymee10.github.io/Aventura-marina/" style="background-color:#005F99; color:white; padding:10px 15px;text-decoration:none;border-radius:5px; ">A Jugar</a>
-
-
+<a href="https://aymee10.github.io/Aventura-marina/" style="background-color:#005F99; color:white; padding:10px 15px; text-decoration:none; border-radius:5px; font-size:18px; font-weight:bold; display:inline-block;">🎮 A Jugar</a>
