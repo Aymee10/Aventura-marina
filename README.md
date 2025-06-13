@@ -1,12 +1,5 @@
-[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Times+New+Roman&weight=200&size=40&duration=4000&pause=1000&color=221DF7&background=1EFAFF&center=true&vCenter=true&repeat=false&width=435&lines=Aventura-marina)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Times+New+Roman&weight=200&size=50&letterSpacing=big&duration=4000&pause=300&color=221DF7&background=1EFAFF&center=true&multiline=true&repeat=false&width=700&height=100&lines=Aventura+marina)](https://git.io/typing-svg)
 
-Lina es una niña curiosa que está de vacaciones en una isla tropical. Un día, mientras nadaba cerca de la playa, encontró la entrada a una cueva submarina oculta.
-La leyenda local dice que dentro se encuentra la Perla de Luz, un artefacto mágico que protege el equilibrio del océano.
-🧭 Explora la cueva y recoge todas los perlas hasta formar la Perla de Luz.
-Solo tienes 1 minuto para completar la tarea.
+[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Times+New+Roman&weight=200&size=25&duration=4000&pause=300&color=221DF7&background=1EFAFF&multiline=true&repeat=false&width=700&height=300&lines=Lina+es+una+ni%C3%B1a+curiosa+que+est%C3%A1+de+vacaciones+en+una+isla+tropical.+;Un+d%C3%ADa%2C+mientras+nadaba+cerca+de+la+playa%2C+;encontr%C3%B3+la+entrada+a+una+cueva+submarina+oculta.;+La+leyenda+local+dice+que+dentro+se+encuentra+la+Perla+de+Luz%2C+;un+artefacto+m%C3%A1gico+que+protege+el+equilibrio+del+oc%C3%A9ano.+;%F0%9F%A7%AD+Explora+la+cueva+y+recoge+todas+los+perlas+hasta+formar+la+;Perla+de+Luz.;+Solo+tienes+1+minuto+para+completar+la+tarea.)](https://git.io/typing-svg)
 
-⚠️ Cuidado con las medusas que intentarán detenerte; si las tocas perderás ⏱️20s de tu tiempo.
-💖 Atrapa las burbujas para aumentar tu tiempo en 10s.
-
-
-🔴Usa las teclas ⬅ y ➡ para moverte y ⬆ para saltar.
+[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Times+New+Roman&weight=200&size=25&duration=4000&pause=300&color=221DF7&background=1EFAFF&multiline=true&repeat=false&width=700&height=200&separator=%3C&lines=%E2%9A%A0%EF%B8%8F+Cuidado+con+las+medusas+que+intentar%C3%A1n+detenerte;+%3Csi+las+tocas+perder%C3%A1s+%E2%8F%B1%EF%B8%8F20s+de+tu+tiempo.+%3C%F0%9F%92%96+Atrapa+las+burbujas+para+aumentar+tu+tiempo+en+10s.%3C%F0%9F%94%B4Usa+las+teclas+%E2%AC%85+y+%E2%9E%A1+para+moverte+y+%E2%AC%86+para+saltar.%3C%E2%8F%B3+Recuerda+que+solo+tienes+1+minuto)](https://git.io/typing-svg)
