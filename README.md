@@ -13,6 +13,7 @@
 
 ### 🔴 Usa las teclas ⬅ y ➡ para moverte y ⬆ para saltar.
 
+
 ## ⏳ Recuerda que solo tienes 1 minuto.
 
 <div style="text-align:center;">
