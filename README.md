@@ -15,6 +15,11 @@
 
 ## ⏳ Recuerda que solo tienes 1 minuto.
 
+<div style="text-align:center;">
+  <a href="https://aymee10.github.io/Aventura-marina/">
+    <img src="img/button.png" alt="Botón Jugar" width="200" />
+  </a>
+</div>
 
-                  [![Jugar](https://img.shields.io/badge/🎮-A_Jugar-blue?style=for-the-badge)](https://aymee10.github.io/Aventura-marina/)
+                     
 
