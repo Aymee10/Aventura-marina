@@ -280,7 +280,8 @@ class Moneda {
         this.width = 30;
         this.height = 30;
         this.x = Math.random() * 700;
-        this.y = Math.random() * 320;
+        // this.y = Math.random() * 320;
+        this.y = 50 + Math.random() * 200;
 
 
 
@@ -303,7 +304,8 @@ class PersonajeMalo extends Personaje {
         super();
         this.velocidad = 2 + Math.random() * 2;
         this.x = -80; // comienza fuera de la pantalla izquierda
-        this.y = Math.random() * 350;
+        // this.y = Math.random() * 350;
+        this.y = 50 + Math.random() * 200;
         this.colisionado = false;
         this.element.classList.remove("personaje");
         this.element.classList.add("personaje-malo");
