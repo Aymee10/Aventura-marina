@@ -4,5 +4,18 @@
 
 ![Imagen del juego](img/juegoPrincipal.png)
 
+![Imagen del juego](img/lina.png) Esta es Lina, tu personaje principal.
 
-[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Times+New+Roman&weight=200&size=25&duration=4000&pause=300&color=221DF7&background=1EFAFF&multiline=true&repeat=false&width=700&height=200&separator=%3C&lines=%E2%9A%A0%EF%B8%8F+Cuidado+con+las+medusas+que+intentar%C3%A1n+detenerte;+%3Csi+las+tocas+perder%C3%A1s+%E2%8F%B1%EF%B8%8F20s+de+tu+tiempo.+%3C%F0%9F%92%96+Atrapa+las+burbujas+para+aumentar+tu+tiempo+en+10s.%3C%F0%9F%94%B4Usa+las+teclas+%E2%AC%85+y+%E2%9E%A1+para+moverte+y+%E2%AC%86+para+saltar.%3C%E2%8F%B3+Recuerda+que+solo+tienes+1+minuto)](https://git.io/typing-svg)
+![Imagen del juego](img/pearl.svg) Estas son las perlas que debes recoger para formas la Perla de Luz, recógelas todas antes de que acabe el tiempo.
+
+![Imagen del juego](img/jellyfish.svg) Cuidado con las medusas que intentarán detenerte, si las tocas perderás 20 segundos de tu tiempo.
+
+![Imagen del juego](img/bubble.svg) Para ayudarte en tu misión las burbujas de aire te darán 10 segundos extra, atrápalas antes de que desaparezcan
+
+🔴Usa las teclas ⬅ y ➡ para moverte y ⬆ para saltar.
+
+⏳ Recuerda que solo tienes 1 minuto.
+
+<a href="https://aymee10.github.io/Aventura-marina/" style="background-color:#005F99;color:white;padding:10px 15px;text-decoration:none;border-radius:5px;">A Jugar</a>
+
+
