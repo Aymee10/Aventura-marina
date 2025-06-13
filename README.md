@@ -12,7 +12,7 @@
 
 <img src="img/bubble.svg" alt="Burbuja" width="40" height="40"/>   **Para ayudarte en tu misión las burbujas de aire te darán 10 segundos extra, atrápalas antes de que desaparezcan.**
 
-<p style="font-size:20px; color:#D7263D; font-weight:bold;">
+<p style="font-size:40px; color:#D7263D; font-weight:bold;">
 🔴 Usa las teclas ⬅ y ➡ para moverte y ⬆ para saltar.
 </p>
 
