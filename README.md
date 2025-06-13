@@ -17,5 +17,5 @@
 
 ## ⏳ Recuerda que solo tienes 1 minuto.
 
-
+[![A jugar](https://img.shields.io/badge/-amargopastor-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://aymee10.github.io/Aventura-marina)](https://aymee10.github.io/Aventura-marina)
 <a href="https://aymee10.github.io/Aventura-marina/" style="background-color:#005F99; color:white; padding:10px 15px; text-decoration:none; border-radius:5px; font-size:18px; font-weight:bold; display:inline-block;">🎮 A Jugar</a>
