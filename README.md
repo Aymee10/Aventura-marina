@@ -4,13 +4,13 @@
 
 <img src="img/juegoPrincipal.png" alt="Juego" width="700" height="400"/>
 
-<img src="img/lins.svg" alt="Lina" width="30" height="40"/>**Esta es Lina, tu personaje principal.**
+<img src="img/lina.png" alt="Lina" width="30" height="40"/>**Esta es Lina, tu personaje principal.**
 
-<img src="img/pearl.svg" alt="Perla" width="20" height="20"/> **Estas son las perlas que debes recoger para formar la Perla de Luz, recógelas todas antes de que acabe el tiempo.**
+<img src="img/pearl.svg" alt="Perla" width="30" height="30"/> **Estas son las perlas que debes recoger para formar la Perla de Luz, recógelas todas antes de que acabe el tiempo.**
 
-<img src="img/jellyfish.svg" alt="medusa" width="20" height="20"/>  **Cuidado con las medusas que intentarán detenerte, si las tocas perderás 20 segundos de tu tiempo.**
+<img src="img/jellyfish.svg" alt="medusa" width="30" height="30"/>  **Cuidado con las medusas que intentarán detenerte, si las tocas perderás 20 segundos de tu tiempo.**
 
-<img src="img/bubble.svg" alt="Burbuja" width="20" height="20"/>  **Para ayudarte en tu misión las burbujas de aire te darán 10 segundos extra, atrápalas antes de que desaparezcan.**
+<img src="img/bubble.svg" alt="Burbuja" width="30" height="30"/>  **Para ayudarte en tu misión las burbujas de aire te darán 10 segundos extra, atrápalas antes de que desaparezcan.**
 
 **🔴Usa las teclas ⬅ y ➡ para moverte y ⬆ para saltar.**
 
