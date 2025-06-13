@@ -2,9 +2,9 @@
 
 [![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Times+New+Roman&weight=200&size=25&duration=4000&pause=300&color=221DF7&background=1EFAFF&multiline=true&repeat=false&width=700&height=300&lines=Lina+es+una+ni%C3%B1a+curiosa+que+est%C3%A1+de+vacaciones+en+una+isla+tropical.+;Un+d%C3%ADa%2C+mientras+nadaba+cerca+de+la+playa%2C+;encontr%C3%B3+la+entrada+a+una+cueva+submarina+oculta.;+La+leyenda+local+dice+que+dentro+se+encuentra+la+Perla+de+Luz%2C+;un+artefacto+m%C3%A1gico+que+protege+el+equilibrio+del+oc%C3%A9ano.+;%F0%9F%A7%AD+Explora+la+cueva+y+recoge+todas+los+perlas+hasta+formar+la+;Perla+de+Luz.;+Solo+tienes+1+minuto+para+completar+la+tarea.)](https://git.io/typing-svg)
 
-![Imagen del juego](img/juegoPrincipal.png)
+<img src="img/juegoPrincipal.png" alt="Juego" width="700" height="400"/>
 
-![Imagen del juego](img/lina.png) Esta es Lina, tu personaje principal.
+<img src="img/lins.svg" alt="Lina" width="30" height="40"/>**Esta es Lina, tu personaje principal.**
 
 <img src="img/pearl.svg" alt="Perla" width="20" height="20"/> **Estas son las perlas que debes recoger para formar la Perla de Luz, recógelas todas antes de que acabe el tiempo.**
 
