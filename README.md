@@ -17,7 +17,8 @@
 ###  ⬆ Para saltar.
 
 
-  **Puedes ver en la parte superior tu puntuación y el tiempo restante actualizado cada segundo**
+  **Puedes ver en la parte superior tu puntuación y el tiempo restante actualizado cada segundo.**
+  
   **También puedes pausar o reproducir la música cuando desees en la esquina superior derecha**
 
 
