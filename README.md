@@ -13,7 +13,8 @@
 
 ### 🔴 Usa las teclas ⬅ y ➡ para moverte y ⬆ para saltar.
 
-<img src="img/tiempo.png" alt="tiempo" width="160" height="80"/>   **Puedes ver en la parte superior tu puntuación y el tiempo restante**
+  **Puedes ver en la parte superior tu puntuación y el tiempo restante actualizado cada segundo**
+  **También puedes pausar o reproducir la música cuando desees en la esquina superior derecha**
 
 
 ## ⏳ Recuerda que solo tienes 1 minuto.
