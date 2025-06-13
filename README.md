@@ -4,8 +4,6 @@
 
 <img src="img/juegoPrincipal.png" alt="Juego" width="700" height="400"/>
 
-<img src="img/lina.png" alt="Lina"/> **Esta es Lina, tu personaje principal.**
-
 <img src="img/pearl.svg" alt="Perla" width="40" height="40"/>  **Estas son las perlas que debes recoger para formar la Perla de Luz, recógelas todas antes de que acabe el tiempo.**
 
 <img src="img/jellyfish.svg" alt="medusa" width="40" height="40"/>   **Cuidado con las medusas que intentarán detenerte, si las tocas perderás 20 segundos de tu tiempo.**
@@ -18,4 +16,5 @@
 ## ⏳ Recuerda que solo tienes 1 minuto.
 
 
-                                          [🎮 **A Jugar** »](https://aymee10.github.io/Aventura-marina/)
+                  [![Jugar](https://img.shields.io/badge/🎮-A_Jugar-blue?style=for-the-badge)](https://aymee10.github.io/Aventura-marina/)
+
