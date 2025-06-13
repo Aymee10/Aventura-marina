@@ -4,18 +4,19 @@
 
 <img src="img/juegoPrincipal.png" alt="Juego" width="700" height="400"/>
 
-<img src="img/lina.png" alt="Lina"/>**Esta es Lina, tu personaje principal.**
+<img src="img/lina.png" alt="Lina"/> **Esta es Lina, tu personaje principal.**
 
-<img src="img/pearl.svg" alt="Perla" width="40" height="40"/> **Estas son las perlas que debes recoger para formar la Perla de Luz, recógelas todas antes de que acabe el tiempo.**
+<img src="img/pearl.svg" alt="Perla" width="40" height="40"/>  **Estas son las perlas que debes recoger para formar la Perla de Luz, recógelas todas antes de que acabe el tiempo.**
 
-<img src="img/jellyfish.svg" alt="medusa" width="40" height="40"/>  **Cuidado con las medusas que intentarán detenerte, si las tocas perderás 20 segundos de tu tiempo.**
+<img src="img/jellyfish.svg" alt="medusa" width="40" height="40"/>   **Cuidado con las medusas que intentarán detenerte, si las tocas perderás 20 segundos de tu tiempo.**
 
-<img src="img/bubble.svg" alt="Burbuja" width="40" height="40"/>  **Para ayudarte en tu misión las burbujas de aire te darán 10 segundos extra, atrápalas antes de que desaparezcan.**
+<img src="img/bubble.svg" alt="Burbuja" width="40" height="40"/>   **Para ayudarte en tu misión las burbujas de aire te darán 10 segundos extra, atrápalas antes de que desaparezcan.**
 
-**🔴Usa las teclas ⬅ y ➡ para moverte y ⬆ para saltar.**
 
-**⏳ Recuerda que solo tienes 1 minuto.**
+### **🔴Usa las teclas ⬅ y ➡ para moverte y ⬆ para saltar.**
 
-<a href="https://aymee10.github.io/Aventura-marina/" style="background-color:#005F99; color:white; padding:10px 15px;text-decoration:none;border-radius:5px;">A Jugar</a>
+                            ## **⏳ Recuerda que solo tienes 1 minuto.**
+
+<a href="https://aymee10.github.io/Aventura-marina/" style="background-color:#005F99; color:white; padding:10px 15px;text-decoration:none;border-radius:5px; ">A Jugar</a>
 
 
